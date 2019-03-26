@@ -4,6 +4,7 @@
 __pycache__/
 local_settings.py
 db.sqlite3
-media
+/media
 btre_resources/btre_theme/node_modules/
 .vscode/settings.json
+/static
