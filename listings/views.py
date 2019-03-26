@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Listing
 
 # Create your views here.
@@ -7,8 +7,12 @@ from .models import Listing
 
 def index(request):
     listings = Listing.objects.all()
+
+    paginator = Paginator(listings, 3)
+    page = request.GET.get('page')
+    page_listings = paginator.get_page(page)
     context = {
-        'listings': listings
+        'listings': page_listings
     }
     return render(request, 'listings/listings.html', context)
 
