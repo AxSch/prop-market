@@ -143,3 +143,12 @@ MESSAGE_TAGS = {
 
 LOGIN_REDIRECT_URL = '/accounts/dashboard'
 LOGOUT_REDIRECT_URL = '/'
+
+# Email config
+EMAIL_HOST = ['smtp.gmail.com']
+EMAIL_HOST = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ""
+EMAIL_USE_TLS = True
+
+
